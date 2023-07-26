@@ -1,6 +1,6 @@
 {
 	"name": "hookings",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "More hooks for React with TypeScript",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
