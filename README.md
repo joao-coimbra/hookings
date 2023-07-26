@@ -16,7 +16,7 @@ or
 yarn add hookings
 ```
 
-## Installation
+## Usage
 
 ### useKeyDown
 
