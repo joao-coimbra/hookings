@@ -4,7 +4,7 @@ import { KeyDownOptions, KeyPress } from "../src";
 // Por exemplo, você pode definir tipos para os hooks e interfaces relacionadas.
 
 // Exporte as definições de tipo como um módulo para que seja corretamente importado.
-declare module "hookings" {
+declare module "index" {
 	export function useKeyDown(
 		keyPress: KeyPress,
 		callback: () => void,

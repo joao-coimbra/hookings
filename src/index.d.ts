@@ -1,4 +1,4 @@
-import { KeyPress, KeyDownOptions } from "./index";
+import { KeyDownOptions, KeyPress } from ".";
 
 export function useKeyDown(
 	keyPress: KeyPress,
