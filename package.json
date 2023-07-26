@@ -1,0 +1,35 @@
+{
+	"name": "hookings",
+	"version": "1.0.1",
+	"description": "More hooks for React with TypeScript",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"author": "João Coimbra <joao.benatti.coimbra@gmail.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/joao-coimbra/hookings.git"
+	},
+	"scripts": {
+		"build": "tsc",
+		"prepare": "npm run build"
+	},
+	"keywords": [
+		"react",
+		"typescript",
+		"hook"
+	],
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.2.16",
+		"@types/react-dom": "^18.2.7",
+		"typescript": "^5.1.6"
+	},
+	"bugs": {
+		"url": "https://github.com/joao-coimbra/hookings/issues"
+	},
+	"homepage": "https://github.com/joao-coimbra/hookings#readme"
+}
