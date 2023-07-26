@@ -8,67 +8,67 @@
   </a>
 </p>
 
-<p align="center">🎣 A collection of custom React hooks to simplify and enhance your React development experience.</p>
+<p align="center">🎣 Uma coleção de hooks personalizados para React que simplificam e aprimoram a experiência de desenvolvimento em React.</p>
 
-## Installation 🚀
+## Instalação 🚀
 
-You can install `hookings` using npm:
+Você pode instalar o `hookings` usando npm:
 
 ```bash
 npm install hookings
 ```
 
-or
+ou
 
 ```bash
 yarn add hookings
 ```
 
-## Features 🌟
+## Recursos 🌟
 
--   Easy-to-use and well-documented hooks for common React use-cases.
--   Highly customizable options to adapt the hooks to your needs.
--   A growing collection of useful and versatile hooks.
+- Hooks fáceis de usar e bem documentados para casos de uso comuns em React.
+- Opções altamente personalizáveis para adaptar os hooks às suas necessidades.
+- Uma crescente coleção de hooks úteis e versáteis.
 
-# Available Hooks 🎣
+# Hooks Disponíveis 🎣
 
-1. `useKeyDown`: A hook to capture the event of pressing a specific keyboard key with customizable options for modifier keys.
-1. `useDebounce`: A hook to create a debounce effect that delays the execution of a function until a certain amount of time has passed without additional calls.
-1. `useDropdown`: A hook to handle the behavior of a dropdown menu and detect clicks outside of the dropdown to close it.
+1. `useKeyDown`: Um hook para capturar o evento de pressionar uma tecla específica no teclado, com opções personalizáveis para teclas de modificação.
+1. `useDebounce`: Um hook para criar um efeito de "debounce" que atrasa a execução de uma função até que um determinado tempo tenha passado sem chamadas adicionais.
+1. `useDropdown`: Um hook para lidar com o comportamento de um menu suspenso e detectar cliques fora do menu para fechá-lo.
 
-> Note: More hooks are in development and will be added to the collection soon! 🚧
+> Nota: Mais hooks estão em desenvolvimento e serão adicionados à coleção em breve! 🚧
 
-## Usage 📝
+## Uso 📝
 
 ### useKeyDown
 
-Here's a quick example of how to use the `useKeyDown` hook:
+Aqui está um exemplo rápido de como usar o hook `useKeyDown`:
 
 ```jsx
 import { useKeyDown } from "hookings";
 
 const MyComponent = () => {
-	// Call this function when the 'Ctrl + Enter' keys are pressed
-	const handleKeyPress = () => {
-		// Your logic here...
-	};
+  // Chame esta função quando as teclas 'Ctrl + Enter' forem pressionadas
+  const handleKeyPress = () => {
+    // Sua lógica aqui...
+  };
 
-	useKeyDown("KeyEnter", handleKeyPress, { ctrlKey: true });
+  useKeyDown("KeyEnter", handleKeyPress, { ctrlKey: true });
 
-	// Rest of your component code...
+  // Resto do código do seu componente...
 };
 ```
 
-For more detailed examples and usage instructions, please check the [documentation](https://github.com/joao-coimbra/hookings#readme).
+Para exemplos mais detalhados e instruções de uso, consulte a [documentação](https://github.com/joao-coimbra/hookings#readme).
 
-## Contributions 🤝
+## Contribuições 🤝
 
-Contributions to `hookings` are always welcome! If you have any ideas for new hooks or improvements to existing ones, feel free to open an issue or submit a pull request on [GitHub](https://github.com/joao-coimbra/hookings).
+Contribuições para o `hookings` são sempre bem-vindas! Se você tem ideias para novos hooks ou melhorias nos existentes, sinta-se à vontade para abrir uma issue ou enviar um pull request no [GitHub](https://github.com/joao-coimbra/hookings).
 
-## License 📄
+## Licença 📄
 
-Hookings is open-source software licensed under the [MIT License](https://github.com/joao-coimbra/hookings/blob/main/LICENSE).
+Hookings é um software de código aberto licenciado sob a [MIT License](https://github.com/joao-coimbra/hookings/blob/main/LICENSE).
 
-## Conclusion 🎉
+## Conclusão 🎉
 
-Thank you for using **Hookings**! We hope these custom hooks help improve your React development experience. If you encounter any issues or have any questions, don't hesitate to reach out on [Github](https://github.com/joao-coimbra/hookings/issues). Happy coding! 🚀
+Obrigado por usar o **Hookings**! Esperamos que esses hooks personalizados ajudem a melhorar a sua experiência de desenvolvimento em React. Se encontrar algum problema ou tiver alguma dúvida, não hesite em nos contatar no [Github](https://github.com/joao-coimbra/hookings/issues). Happy coding! 🚀
