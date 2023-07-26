@@ -55,7 +55,7 @@ import { useDropdown } from "hookings";
 // Example usage:
 const dropdownRef = useRef(null);
 useDropdown(dropdownRef, () => {
-  // Your logic to handle click outside of the element here
+	// Your logic to handle click outside of the element here
 });
 ```
 
