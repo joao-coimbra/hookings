@@ -4,7 +4,7 @@
     <img alt="npm version" src="https://badge.fury.io/js/hookings.svg">
   </a>
   <a href="https://github.com/joao-coimbra/hookings/blob/main/LICENSE">
-    <img alt="GitHub license" src="https://img.shields.io/github/license/joao-coimbra/hookings">
+    <img alt="MIT license" src="https://img.shields.io/npm/l/hookings">
   </a>
 </p>
 
