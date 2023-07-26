@@ -4,6 +4,10 @@
 	"description": "More hooks for React with TypeScript",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
+	"files": [
+		"dist",
+		"types"
+	],
 	"author": "João Coimbra <joao.benatti.coimbra@gmail.com>",
 	"license": "MIT",
 	"repository": {
