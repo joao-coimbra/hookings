@@ -4,7 +4,7 @@
  * @param {string} str The string to be slugified
  * @return {string} The slugified string.
  */
-export function toSlug(str: string): string {
+function toSlug(str: string): string {
   let s = str;
   if (!s) {
     return "";
@@ -16,3 +16,5 @@ export function toSlug(str: string): string {
   s = s.replace(/[^a-z0-9-]+/g, "");
   return s;
 }
+
+export { toSlug };
