@@ -1,5 +1,5 @@
 {
-	"extends": "hookings/tsconfig/react-library.json",
+	"extends": "@hookings/tsconfig/react-library.json",
 	"include": ["."],
 	"exclude": ["dist", "build", "node_modules"]
 }
