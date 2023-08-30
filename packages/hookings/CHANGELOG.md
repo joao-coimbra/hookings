@@ -1,5 +1,11 @@
 # hookings
 
+## 2.2.1
+
+### Patch Changes
+
+- add useStateWithCallback hook
+
 ## 2.2.0
 
 ### Minor Changes
@@ -10,7 +16,7 @@
 
 ### Minor Changes
 
-- add wait and hook
+- add waitForElement util and hook
 
 ### Patch Changes
 
@@ -24,7 +30,7 @@
 
 ### Patch Changes
 
-- fix inssues
+- fix issues
 
 ## 2.0.0
 
