@@ -5,8 +5,8 @@ type CallbackFunction<T> = (state: T) => void;
 
 // Define the type for the result returned by the useStateWithCallback hook
 type UseStateWithCallbackResult<T> = [
-	T,
-	(newState: React.SetStateAction<T>, callback?: CallbackFunction<T>) => void
+  T,
+  (newState: React.SetStateAction<T>, callback?: CallbackFunction<T>) => void
 ];
 
 /**
@@ -25,29 +25,29 @@ type UseStateWithCallbackResult<T> = [
  * });
  */
 function useStateWithCallback<T>(
-	initialState: T
+  initialState: T
 ): UseStateWithCallbackResult<T> {
-	const [state, setState] = React.useState<T>(initialState);
-	const callbackRef = React.useRef<CallbackFunction<T> | null>(null);
+  const [state, setState] = React.useState<T>(initialState);
+  const callbackRef = React.useRef<CallbackFunction<T> | null>(null);
 
-	React.useEffect(() => {
-		if (callbackRef.current) {
-			callbackRef.current(state);
-			callbackRef.current = null;
-		}
-	}, [state]);
+  React.useEffect(() => {
+    if (callbackRef.current) {
+      callbackRef.current(state);
+      callbackRef.current = null;
+    }
+  }, [state]);
 
-	const setStateWithCallback = (
-		newState: React.SetStateAction<T>,
-		callback?: CallbackFunction<T>
-	): void => {
-		setState(newState);
-		if (typeof callback === "function") {
-			callbackRef.current = callback;
-		}
-	};
+  const setStateWithCallback = (
+    newState: React.SetStateAction<T>,
+    callback?: CallbackFunction<T>
+  ): void => {
+    setState(newState);
+    if (typeof callback === "function") {
+      callbackRef.current = callback;
+    }
+  };
 
-	return [state, setStateWithCallback];
+  return [state, setStateWithCallback];
 }
 
 export { useStateWithCallback };

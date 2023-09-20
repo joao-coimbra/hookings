@@ -17,26 +17,26 @@ type UseLocalStorageResult<T> = [T, (value: T | ((prevValue: T) => T)) => void];
  * setName("Alice"); // Updates the value in localStorage to "Alice"
  */
 function useLocalStorage<T>(
-	key: string,
-	initialValue: T
+  key: string,
+  initialValue: T
 ): UseLocalStorageResult<T> {
-	// Get initial value from localStorage if it exists
-	const storedValue =
-		typeof window !== "undefined" ? localStorage.getItem(key) : null;
-	const initial = storedValue ? JSON.parse(storedValue) : initialValue;
+  // Get initial value from localStorage if it exists
+  const storedValue =
+    typeof window !== "undefined" ? localStorage.getItem(key) : null;
+  const initial = storedValue ? JSON.parse(storedValue) : initialValue;
 
-	// Create state to hold the current value
-	const [value, setValue] = React.useState<T>(initial);
+  // Create state to hold the current value
+  const [value, setValue] = React.useState<T>(initial);
 
-	// Update localStorage when the value changes
-	const updateValue = (newValue: T | ((prevValue: T) => T)) => {
-		const valueToStore =
-			newValue instanceof Function ? newValue(value) : newValue;
-		setValue(valueToStore);
-		localStorage.setItem(key, JSON.stringify(valueToStore));
-	};
+  // Update localStorage when the value changes
+  const updateValue = (newValue: T | ((prevValue: T) => T)) => {
+    const valueToStore =
+      newValue instanceof Function ? newValue(value) : newValue;
+    setValue(valueToStore);
+    localStorage.setItem(key, JSON.stringify(valueToStore));
+  };
 
-	return [value, updateValue];
+  return [value, updateValue];
 }
 
 export { useLocalStorage };

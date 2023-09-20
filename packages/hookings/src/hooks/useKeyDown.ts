@@ -60,6 +60,8 @@ type ModifierKeys =
   | "CapsLock"
   | "Space";
 
+type Others = "Slash";
+
 // Combine all key types to create the `KeyPress` type
 type KeyPress =
   | `Key${AlphabeticKeys}`
@@ -67,7 +69,8 @@ type KeyPress =
   | FunctionKeys
   | ControlKeys
   | ArrowKeys
-  | ModifierKeys;
+  | ModifierKeys
+  | Others;
 
 type ModifierKey = "ctrlKey" | "altKey" | "shiftKey";
 
@@ -79,7 +82,7 @@ type KeyDownOptions = Partial<Record<ModifierKey, boolean>>;
  * @param {KeyPress} keyPress - The key code of the combination to capture.
  * @param {() => void} callback - The callback function to execute when the key combination is detected.
  * @param {KeyDownOptions} options - Additional options to modify hook behavior, such as modifier keys.
- * @param {number} delay - Delay in milliseconds before allowing the handler to be triggered again.
+ * @param {boolean} activateOnce - Whether to activate the key combination only once.
  *
  * @example
  * // Using the useKeyDown hook to handle a specific key combination
@@ -97,9 +100,9 @@ function useKeyDown(
   keyPress: KeyPress,
   callback: () => void,
   options: KeyDownOptions = {},
-  delay: number = 0
+  activateOnce: boolean = false
 ): void {
-  const [isBlocked, { toggle: toggleBlock }] = useBoolean();
+  const [isBlocked, toggleBlock] = useBoolean();
   const { ctrlKey = false, altKey = false, shiftKey = false } = options;
 
   // Event handler for the key press
@@ -115,22 +118,32 @@ function useKeyDown(
     ) {
       event.preventDefault(); // Prevent the default key behavior if it's preventable (e.g., form submission).
       callback(); // Execute the provided callback when the key combination matches the expected configuration.
-      toggleBlock();
-      setTimeout(() => {
-        toggleBlock();
-      }, delay);
+
+      activateOnce && toggleBlock.on();
+    }
+  };
+
+  const unlock = (event: KeyboardEvent) => {
+    if (event.code === keyPress) {
+      toggleBlock.off();
     }
   };
 
   useEffect(() => {
     // Add the event listener for the key press event.
     document.addEventListener("keydown", handler);
+    if (activateOnce) {
+      document.addEventListener("keyup", unlock);
+    }
 
     return () => {
       // Remove the event listener when the component is unmounted to avoid memory leaks.
       document.removeEventListener("keydown", handler);
+      if (activateOnce) {
+        document.removeEventListener("keyup", unlock);
+      }
     };
-  }, [keyPress, callback, options]);
+  }, [keyPress, callback, options, activateOnce]);
 }
 
 export { useKeyDown };

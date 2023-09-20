@@ -1,5 +1,29 @@
 # hookings
 
+## 2.4.0
+
+### Minor Changes
+
+- update usekeyDown
+
+## 2.3.2
+
+### Patch Changes
+
+- add delay to useClipboard
+
+## 2.3.1
+
+### Patch Changes
+
+- fix hooks
+
+## 2.3.0
+
+### Minor Changes
+
+- add useClipboard hook
+
 ## 2.2.1
 
 ### Patch Changes

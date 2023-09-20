@@ -14,9 +14,9 @@ export { useStateWithCallback } from "./hooks/useStateWithCallback";
 // Hooks Types
 export type { AsyncState } from "./hooks/useAsync";
 export type {
-	Toggle,
-	ToggleFunctions,
-	UseBooleanResult,
+  Toggle,
+  ToggleFunctions,
+  UseBooleanResult,
 } from "./hooks/useBoolean";
 export type { useClipboardReturn } from "./hooks/useClipboard";
 export type { Controls, IntervalControls } from "./hooks/useInterval";
@@ -24,8 +24,8 @@ export type { KeyPress, ModifierKey, KeyDownOptions } from "./hooks/useKeyDown";
 export type { UseLocalStorageResult } from "./hooks/useLocalStorage";
 export type { Axis } from "./hooks/useScrollAxis";
 export type {
-	CallbackFunction,
-	UseStateWithCallbackResult,
+  CallbackFunction,
+  UseStateWithCallbackResult,
 } from "./hooks/useStateWithCallback";
 
 // Utils
