@@ -1,6 +1,6 @@
 {
 	"name": "hookings",
-	"version": "2.4.0",
+	"version": "2.7.4",
 	"description": "More hooks for React with TypeScript",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",

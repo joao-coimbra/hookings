@@ -1,5 +1,82 @@
 # hookings/docs
 
+## 0.0.18
+
+### Patch Changes
+
+- Updated dependencies
+  - hookings@2.7.4
+
+## 0.0.17
+
+### Patch Changes
+
+- Updated dependencies
+  - hookings@2.7.3
+
+## 0.0.16
+
+### Patch Changes
+
+- Updated dependencies
+  - hookings@2.7.2
+
+## 0.0.15
+
+### Patch Changes
+
+- Updated dependencies
+  - hookings@2.7.1
+
+## 0.0.14
+
+### Patch Changes
+
+- Updated dependencies
+  - hookings@2.7.0
+
+## 0.0.13
+
+### Patch Changes
+
+- Updated dependencies
+  - hookings@2.6.4
+
+## 0.0.12
+
+### Patch Changes
+
+- Updated dependencies
+  - hookings@2.6.3
+
+## 0.0.11
+
+### Patch Changes
+
+- Updated dependencies
+  - hookings@2.6.2
+
+## 0.0.10
+
+### Patch Changes
+
+- Updated dependencies
+  - hookings@2.6.1
+
+## 0.0.9
+
+### Patch Changes
+
+- Updated dependencies
+  - hookings@2.6.0
+
+## 0.0.8
+
+### Patch Changes
+
+- Updated dependencies
+  - hookings@2.5.0
+
 ## 0.0.7
 
 ### Patch Changes
